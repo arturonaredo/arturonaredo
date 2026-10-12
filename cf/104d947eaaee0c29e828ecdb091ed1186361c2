@@ -1,0 +1,32 @@
+.github/validate_bundle.py
+  h_60c37d4b74c247 1-870
+.github/workflows/validate-public.yml
+  h_60c37d4b74c247 1-46
+.gitignore
+  h_60c37d4b74c247 1-43
+README.md
+  h_60c37d4b74c247 1-49
+assets/profile/manifest.json
+  h_60c37d4b74c247 1-7
+assets/profile/pulse-dark.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-light.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-mobile-dark.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-mobile-light.svg
+  h_60c37d4b74c247 1
+assets/profile/snapshot.json
+  h_60c37d4b74c247 1-1466
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf104d947eaaee0c29e828ecdb091ed1186361c2",
+  "prompts": {},
+  "humans": {
+    "h_60c37d4b74c247": {
+      "author": "workflow-engineer <workflow-engineer@appscert.local>"
+    }
+  }
+}
