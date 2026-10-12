@@ -8,12 +8,16 @@ I turn complex problems into applications people can use and platforms teams can
 
 ---
 
+<a href="https://arturonaredo.github.io/arturonaredo/" aria-label="Open the interactive tokens used summary">
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 599px)" srcset="assets/profile/pulse-mobile-dark.svg">
   <source media="(prefers-color-scheme: light) and (max-width: 599px)" srcset="assets/profile/pulse-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile/pulse-dark.svg">
-  <img src="assets/profile/pulse-light.svg" alt="OpenCode usage across all providers: one square per day, including cached tokens. Marked dates are unknown; faint dates are not yet reported. The cutoff is shown on the calendar. Configured infrastructure and a local-model research target follow; token counts are not a measure of delivered value." width="840">
+  <img src="assets/profile/pulse-light.svg" alt="Tokens used summary — all providers, includes cache. One square per day. Open the interactive calendar for daily totals. Marked dates are unknown; faint dates are not yet reported. The cutoff is shown on the calendar. Configured infrastructure and a local-model research target follow; token counts are not a measure of delivered value." width="840">
 </picture>
+</a>
+
+[Explore daily token usage ↗](https://arturonaredo.github.io/arturonaredo/)
 
 ## Systems I work on
 

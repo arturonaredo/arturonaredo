@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Tokens used summary. All providers, including cache. Daily token totals with public, delayed data.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index,follow">
+  <title>Tokens used summary &middot; Arturo Naredo</title>
+  <link rel="stylesheet" href="calendar.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='4' height='4' x='6' y='6' fill='%230a7c5b'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#calendar-title">Skip to calendar</a>
+
+  <header class="page-header" role="banner">
+    <a class="profile-link" href="https://github.com/arturonaredo" rel="noopener noreferrer me">&larr; Arturo Naredo</a>
+  </header>
+
+  <main id="main" class="page-main">
+    <section class="summary" aria-labelledby="summary-title">
+      <h1 id="summary-title">Tokens used summary</h1>
+      <p class="summary-subtitle">All providers &middot; includes cache</p>
+
+      <dl class="summary-figure" aria-label="Annual totals">
+        <div class="summary-figure-row">
+          <dt>Year to reporting cutoff</dt>
+          <dd id="annual-total">loading&hellip;</dd>
+        </div>
+      </dl>
+
+      <p class="summary-note" id="summary-note">
+        One square per day. Hover for usage; click or tap for details.
+      </p>
+    </section>
+
+    <section class="calendar" aria-labelledby="calendar-title">
+      <h2 id="calendar-title">Daily token totals</h2>
+      <p class="calendar-provenance" id="calendar-provenance">Source: OpenCode &middot; UTC &middot; loading&hellip;</p>
+      <p class="calendar-status" id="calendar-status" role="status" aria-live="polite">Loading public data&hellip;</p>
+
+      <div class="calendar-error" id="calendar-error" hidden>
+        <p id="calendar-error-text"></p>
+      </div>
+
+      <noscript>
+        <p class="calendar-noscript">
+          The interactive calendar needs JavaScript to load the public
+          <code>snapshot.json</code>. You can still view the static
+           <a href="./assets/profile/pulse-light.svg">desktop summary</a> or
+           <a href="./assets/profile/pulse-mobile-light.svg">mobile summary</a>
+          image instead.
+        </p>
+      </noscript>
+
+      <div id="calendar-grid" class="calendar-grid" hidden></div>
+
+      <ul class="calendar-legend" aria-label="Calendar legend">
+        <li><span class="legend-swatch day" data-state="measured" data-level="0"></span>0</li>
+        <li><span class="legend-swatch day" data-state="measured" data-level="1"></span>&lt;1M</li>
+        <li><span class="legend-swatch day" data-state="measured" data-level="2"></span>1M&ndash;10M</li>
+        <li><span class="legend-swatch day" data-state="measured" data-level="3"></span>10M&ndash;100M</li>
+        <li><span class="legend-swatch day" data-state="measured" data-level="4"></span>100M+</li>
+        <li><span class="legend-swatch day" data-state="unknown"></span>no measurement</li>
+        <li><span class="legend-swatch day" data-state="pending"></span>not yet reported</li>
+      </ul>
+      <p class="summary-note">Daily totals may be withheld. Unknown is not zero. Tokens are not a measure of delivered value.</p>
+    </section>
+  </main>
+
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a class="profile-link" href="https://github.com/arturonaredo" rel="noopener noreferrer me">github.com/arturonaredo</a>
+    </p>
+  </footer>
+
+  <div id="day-tooltip" class="day-tooltip" role="tooltip" hidden></div>
+
+  <dialog id="day-dialog" class="day-dialog" aria-labelledby="day-dialog-title">
+    <form method="dialog" class="day-dialog-form">
+      <h2 id="day-dialog-title" class="day-dialog-title">Day details</h2>
+      <p class="day-dialog-date" id="day-dialog-date"></p>
+      <dl class="day-dialog-meta">
+        <div><dt>Daily token total</dt><dd id="daily-value">not yet reported</dd></div>
+        <div><dt>Status</dt><dd id="day-dialog-status"></dd></div>
+        <div><dt>Time zone</dt><dd>UTC</dd></div>
+      </dl>
+      <p class="day-dialog-note">
+        All recorded providers &middot; includes cache.
+      </p>
+      <button type="submit" class="day-dialog-close" id="day-dialog-close" autofocus>Close</button>
+    </form>
+  </dialog>
+
+  <script src="calendar.js" defer></script>
+</body>
+</html>

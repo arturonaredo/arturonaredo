@@ -44,3 +44,9 @@ jobs:
 
       - name: validate public bundle
         run: python .github/validate_bundle.py assets/profile
+      - name: Check interactive calendar syntax
+        run: node --check site/calendar.js
+      - name: Test calendar data boundaries
+        run: node --test .github/test_calendar.cjs
+      - name: Validate closed Pages artifact without deploying
+        run: python .github/build_site.py --output _site
