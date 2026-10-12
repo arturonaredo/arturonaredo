@@ -1,0 +1,43 @@
+# Engineering Pulse public-profile site.
+#
+# This repo receives the public bundle (4 SVGs, snapshot.json,
+# manifest.json) ONLY after operator approval. The bundle lives
+# under assets/profile/. Anything else private to the operator's
+# machine, secrets, or local state stays out of the repo.
+
+# Public bundle: tracked (operator-committed after review).
+# Do not gitignore assets/profile/* — the workflow checks them in.
+
+# Earlier review bundle: full diagnostics and historical calendars stay local.
+assets/pulse/
+__pycache__/
+*.pyc
+
+# Local-only artifacts.
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+*.swp
+
+# Anything that smells like a private key, token, or env file.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Local build/test outputs.
+node_modules/
+dist/
+build/
+.cache/
+.turbo/
+
+# CI noise.
+.github/caches/
+
+# Editor / OS junk.
+Thumbs.db

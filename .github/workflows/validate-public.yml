@@ -1,0 +1,46 @@
+name: validate-public
+
+# Validates the public AI Engineering Pulse bundle in this repo.
+#
+# NO homelab connections, NO private data, NO write permissions.
+# This workflow reads the public SVG + JSON files committed under
+# assets/profile/, runs a strict stdlib-only validator, and reports
+# failures. It never pushes, never opens PRs, never uploads
+# artifacts, and never schedules itself on a cadence.
+#
+# The validator lives at .github/validate_bundle.py and mirrors
+# pulse.privacy in the engineering-pulse backend. Drift is detected
+# by the integration tests in engineering-pulse/tests/test_public_workflow.py.
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-public-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: bundle is public-ready
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: checkout
+        uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+        with:
+          persist-credentials: false
+
+      - name: setup python
+        uses: actions/setup-python@06da6279cdbca41027908073e81a4544dc79c06b
+        with:
+          python-version: "3.12"
+
+      - name: validate public bundle
+        run: python .github/validate_bundle.py assets/profile
