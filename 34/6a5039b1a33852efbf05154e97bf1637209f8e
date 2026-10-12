@@ -1,0 +1,40 @@
+.github/build_site.py
+  h_60c37d4b74c247 1-91
+.github/test_calendar.cjs
+  h_60c37d4b74c247 1-69
+.github/workflows/pages.yml
+  h_60c37d4b74c247 1-58
+.github/workflows/validate-public.yml
+  h_60c37d4b74c247 47-52
+.gitignore
+  h_60c37d4b74c247 36
+README.md
+  h_60c37d4b74c247 11,16,18-20
+assets/profile/manifest.json
+  h_60c37d4b74c247 2-5
+assets/profile/pulse-dark.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-light.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-mobile-dark.svg
+  h_60c37d4b74c247 1
+assets/profile/pulse-mobile-light.svg
+  h_60c37d4b74c247 1
+site/calendar.css
+  h_60c37d4b74c247 1-761
+site/calendar.js
+  h_60c37d4b74c247 1-940
+site/index.html
+  h_60c37d4b74c247 1-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "346a5039b1a33852efbf05154e97bf1637209f8e",
+  "prompts": {},
+  "humans": {
+    "h_60c37d4b74c247": {
+      "author": "workflow-engineer <workflow-engineer@appscert.local>"
+    }
+  }
+}
